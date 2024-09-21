@@ -211,7 +211,10 @@
     width: 33%;
   }
   .input-box {
-    width: 33%;
+    width: 34%;
+  }
+  .data-table-body .data-table-row {
+    border-radius: 6px;
   }
   .btn-add-card {
     width: 100%;
