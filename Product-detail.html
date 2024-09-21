@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+  <title>Carbon Pro Product Detail</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/Style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
+
+  <style>
+    /* ABOUT IMG PAGE STARTS */
+
+    .about-product-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0 auto 100px;
+    }
+
+    .about-product-container .ab_pt_imgL-container {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ab_pt_imgL-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .ab_pt_imgL-container .ab_pt_imgd {
+      width: 62%;
+      height: 40%;
+      background-color: #f9f9f9;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+
+    .ab_pt_imgL-container .ab_pt_imgd img {
+      width: 100%;
+    }
+
+    .ab_pt_imgL-container .ab_pt_imgs_slider {
+      display: flex;
+      width: 14%;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .ab_pt_imgL-container .ab_pt_imgs_slider div {
+      width: 96%;
+      /* background-color: red; */
+      cursor: pointer;
+      margin: 0 2px;
+      border-bottom: 3px solid transparent;
+    }
+
+    .ab_pt_imgL-container .ab_pt_imgs_slider div img {
+      width: 100%;
+      /* margin: 10px; */
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .ab_pt_imgL-container .ab_pt_imgs_slider div:focus {
+      border-bottom-color: #9b2b23;
+    }
+
+    @media (max-width: 550px) {
+      .ab_pt_imgL-container .ab_pt_imgd {
+        height: 95%;
+      }
+
+      .ab_pt_imgL-container .ab_pt_imgd {
+        width: 100%;
+      }
+
+      .ab_pt_imgL-container .ab_pt_imgs_slider {
+        width: 25%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ################# -->
+  <!-- Top start Here -->
+  <!-- ################# -->
+  <section class="top-alert-responsive">
+    <div class="container">
+      <div class="alert-bar">
+
+
+        <!-- drop down -->
+        <div class="custom-select" id="custom-select-1">
+          <div class="selected">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2279_363)">
+                <path
+                  d="M11 0C4.93488 0 0 4.93488 0 11C0 17.0651 4.93488 22 11 22C17.0651 22 22 17.0651 22 11C22 4.93488 17.0651 0 11 0ZM11 20.625C5.6925 20.625 1.375 16.3075 1.375 11C1.375 5.6925 5.6925 1.375 11 1.375C16.3075 1.375 20.625 5.6925 20.625 11C20.625 16.3075 16.3075 20.625 11 20.625Z"
+                  fill="#7E7E7E" />
+                <path
+                  d="M11 10.3125C9.88212 10.3125 8.9375 9.68275 8.9375 8.9375C8.9375 8.19225 9.88212 7.5625 11 7.5625C11.6325 7.5625 12.2183 7.7605 12.606 8.10425C12.8893 8.35588 13.3224 8.3325 13.5767 8.0465C13.8297 7.76325 13.8036 7.32875 13.519 7.07575C13.0377 6.64812 12.3915 6.35937 11.6875 6.24525V5.5C11.6875 5.1205 11.3795 4.8125 11 4.8125C10.6205 4.8125 10.3125 5.1205 10.3125 5.5V6.2425C8.745 6.49825 7.5625 7.60925 7.5625 8.9375C7.5625 10.4541 9.10525 11.6875 11 11.6875C12.1179 11.6875 13.0625 12.3172 13.0625 13.0625C13.0625 13.8077 12.1179 14.4375 11 14.4375C10.3675 14.4375 9.78175 14.2395 9.394 13.8958C9.11075 13.6427 8.67625 13.6675 8.42325 13.9535C8.17025 14.2367 8.19638 14.6713 8.481 14.9242C8.96225 15.3533 9.6085 15.6406 10.3125 15.7561V16.5C10.3125 16.8795 10.6205 17.1875 11 17.1875C11.3795 17.1875 11.6875 16.8795 11.6875 16.5V15.7575C13.255 15.5017 14.4375 14.3907 14.4375 13.0625C14.4375 11.5459 12.8948 10.3125 11 10.3125Z"
+                  fill="#7E7E7E" />
+              </g>
+              <defs>
+                <clipPath id="clip0_2279_363">
+                  <rect width="22" height="22" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span id="selected-text">USD</span>
+          </div>
+          <div class="options">
+            <div class="option" data-value="USD" data-flag="https://flagcdn.com/w20/us.png">
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2279_363)">
+                  <path
+                    d="M11 0C4.93488 0 0 4.93488 0 11C0 17.0651 4.93488 22 11 22C17.0651 22 22 17.0651 22 11C22 4.93488 17.0651 0 11 0ZM11 20.625C5.6925 20.625 1.375 16.3075 1.375 11C1.375 5.6925 5.6925 1.375 11 1.375C16.3075 1.375 20.625 5.6925 20.625 11C20.625 16.3075 16.3075 20.625 11 20.625Z"
+                    fill="#7E7E7E" />
+                  <path
+                    d="M11 10.3125C9.88212 10.3125 8.9375 9.68275 8.9375 8.9375C8.9375 8.19225 9.88212 7.5625 11 7.5625C11.6325 7.5625 12.2183 7.7605 12.606 8.10425C12.8893 8.35588 13.3224 8.3325 13.5767 8.0465C13.8297 7.76325 13.8036 7.32875 13.519 7.07575C13.0377 6.64812 12.3915 6.35937 11.6875 6.24525V5.5C11.6875 5.1205 11.3795 4.8125 11 4.8125C10.6205 4.8125 10.3125 5.1205 10.3125 5.5V6.2425C8.745 6.49825 7.5625 7.60925 7.5625 8.9375C7.5625 10.4541 9.10525 11.6875 11 11.6875C12.1179 11.6875 13.0625 12.3172 13.0625 13.0625C13.0625 13.8077 12.1179 14.4375 11 14.4375C10.3675 14.4375 9.78175 14.2395 9.394 13.8958C9.11075 13.6427 8.67625 13.6675 8.42325 13.9535C8.17025 14.2367 8.19638 14.6713 8.481 14.9242C8.96225 15.3533 9.6085 15.6406 10.3125 15.7561V16.5C10.3125 16.8795 10.6205 17.1875 11 17.1875C11.3795 17.1875 11.6875 16.8795 11.6875 16.5V15.7575C13.255 15.5017 14.4375 14.3907 14.4375 13.0625C14.4375 11.5459 12.8948 10.3125 11 10.3125Z"
+                    fill="#7E7E7E" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2279_363">
+                    <rect width="22" height="22" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              USD
+            </div>
+          </div>
+        </div>
+        <!-- dropdown language-->
+        <div class="custom-select" id="custom-select-res-1">
+          <div class="selected">
+            <img id="flag-img" src="https://flagcdn.com/w20/us.png" alt="Flag" width="20px" />
+            <span id="selected-text">ENG</span>
+          </div>
+          <div class="options">
+            <div class="option" data-value="ENG" data-flag="https://flagcdn.com/w20/us.png">
+              <img src="https://flagcdn.com/w20/us.png" alt="ENG Flag" width="20px" />
+              ENG
+            </div>
+            <div class="option" data-value="UK" data-flag="https://flagcdn.com/w20/gb.png">
+              <img src="https://flagcdn.com/w20/gb.png" alt="UK Flag" width="20px" />
+              UK
+            </div>
+            <div class="option" data-value="PAK" data-flag="https://flagcdn.com/w20/pk.png">
+              <img src="https://flagcdn.com/w20/pk.png" alt="Pakistan Flag" width="20px" />
+              PAK
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="top-main">
+    <div class="container">
+      <div class="top-container">
+        <!-- logo -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo.svg" alt="Logo" />
+          </a>
+        </div>
+        <!-- right side -->
+        <div class="search-menu">
+          <div class="search">
+            <span class="fa fa-search"></span>
+            <input placeholder="Search Here" />
+          </div>
+
+          <!-- drop down -->
+          <div class="custom-select" id="custom-select">
+            <div class="selected">
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_2279_363)">
+                  <path
+                    d="M11 0C4.93488 0 0 4.93488 0 11C0 17.0651 4.93488 22 11 22C17.0651 22 22 17.0651 22 11C22 4.93488 17.0651 0 11 0ZM11 20.625C5.6925 20.625 1.375 16.3075 1.375 11C1.375 5.6925 5.6925 1.375 11 1.375C16.3075 1.375 20.625 5.6925 20.625 11C20.625 16.3075 16.3075 20.625 11 20.625Z"
+                    fill="#7E7E7E" />
+                  <path
+                    d="M11 10.3125C9.88212 10.3125 8.9375 9.68275 8.9375 8.9375C8.9375 8.19225 9.88212 7.5625 11 7.5625C11.6325 7.5625 12.2183 7.7605 12.606 8.10425C12.8893 8.35588 13.3224 8.3325 13.5767 8.0465C13.8297 7.76325 13.8036 7.32875 13.519 7.07575C13.0377 6.64812 12.3915 6.35937 11.6875 6.24525V5.5C11.6875 5.1205 11.3795 4.8125 11 4.8125C10.6205 4.8125 10.3125 5.1205 10.3125 5.5V6.2425C8.745 6.49825 7.5625 7.60925 7.5625 8.9375C7.5625 10.4541 9.10525 11.6875 11 11.6875C12.1179 11.6875 13.0625 12.3172 13.0625 13.0625C13.0625 13.8077 12.1179 14.4375 11 14.4375C10.3675 14.4375 9.78175 14.2395 9.394 13.8958C9.11075 13.6427 8.67625 13.6675 8.42325 13.9535C8.17025 14.2367 8.19638 14.6713 8.481 14.9242C8.96225 15.3533 9.6085 15.6406 10.3125 15.7561V16.5C10.3125 16.8795 10.6205 17.1875 11 17.1875C11.3795 17.1875 11.6875 16.8795 11.6875 16.5V15.7575C13.255 15.5017 14.4375 14.3907 14.4375 13.0625C14.4375 11.5459 12.8948 10.3125 11 10.3125Z"
+                    fill="#7E7E7E" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2279_363">
+                    <rect width="22" height="22" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span id="selected-text">USD</span>
+            </div>
+            <div class="options">
+              <div class="option" data-value="USD" data-flag="https://flagcdn.com/w20/us.png">
+                <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_2279_363)">
+                    <path
+                      d="M11 0C4.93488 0 0 4.93488 0 11C0 17.0651 4.93488 22 11 22C17.0651 22 22 17.0651 22 11C22 4.93488 17.0651 0 11 0ZM11 20.625C5.6925 20.625 1.375 16.3075 1.375 11C1.375 5.6925 5.6925 1.375 11 1.375C16.3075 1.375 20.625 5.6925 20.625 11C20.625 16.3075 16.3075 20.625 11 20.625Z"
+                      fill="#7E7E7E" />
+                    <path
+                      d="M11 10.3125C9.88212 10.3125 8.9375 9.68275 8.9375 8.9375C8.9375 8.19225 9.88212 7.5625 11 7.5625C11.6325 7.5625 12.2183 7.7605 12.606 8.10425C12.8893 8.35588 13.3224 8.3325 13.5767 8.0465C13.8297 7.76325 13.8036 7.32875 13.519 7.07575C13.0377 6.64812 12.3915 6.35937 11.6875 6.24525V5.5C11.6875 5.1205 11.3795 4.8125 11 4.8125C10.6205 4.8125 10.3125 5.1205 10.3125 5.5V6.2425C8.745 6.49825 7.5625 7.60925 7.5625 8.9375C7.5625 10.4541 9.10525 11.6875 11 11.6875C12.1179 11.6875 13.0625 12.3172 13.0625 13.0625C13.0625 13.8077 12.1179 14.4375 11 14.4375C10.3675 14.4375 9.78175 14.2395 9.394 13.8958C9.11075 13.6427 8.67625 13.6675 8.42325 13.9535C8.17025 14.2367 8.19638 14.6713 8.481 14.9242C8.96225 15.3533 9.6085 15.6406 10.3125 15.7561V16.5C10.3125 16.8795 10.6205 17.1875 11 17.1875C11.3795 17.1875 11.6875 16.8795 11.6875 16.5V15.7575C13.255 15.5017 14.4375 14.3907 14.4375 13.0625C14.4375 11.5459 12.8948 10.3125 11 10.3125Z"
+                      fill="#7E7E7E" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2279_363">
+                      <rect width="22" height="22" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                USD
+              </div>
+            </div>
+          </div>
+          <!-- dropdown language-->
+          <div class="custom-select" id="custom-select-res">
+            <div class="selected">
+              <img id="flag-img" src="https://flagcdn.com/w20/us.png" alt="Flag" width="20px" />
+              <span id="selected-text">ENG</span>
+            </div>
+            <div class="options">
+              <div class="option" data-value="ENG" data-flag="https://flagcdn.com/w20/us.png">
+                <img src="https://flagcdn.com/w20/us.png" alt="ENG Flag" width="20px" />
+                ENG
+              </div>
+              <div class="option" data-value="UK" data-flag="https://flagcdn.com/w20/gb.png">
+                <img src="https://flagcdn.com/w20/gb.png" alt="UK Flag" width="20px" />
+                UK
+              </div>
+              <div class="option" data-value="PAK" data-flag="https://flagcdn.com/w20/pk.png">
+                <img src="https://flagcdn.com/w20/pk.png" alt="Pakistan Flag" width="20px" />
+                PAK
+              </div>
+            </div>
+          </div>
+
+          <!-- button -->
+          <button class="button-without-icon">SIGN UP</button>
+        </div>
+
+
+        <!-- outside the icon res-->
+        <div class="icons-res">
+
+          <!-- search -->
+          <button class="button-icon-only-res" id="openSearch" onclick="showSearchModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30">
+              <path
+                d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                fill="#9b2b23">
+              </path>
+            </svg>
+          </button>
+
+          <!-- user -->
+          <button class="button-icon-only-res">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.8275 11.5609C13.4158 11.5609 14.7909 10.9913 15.9148 9.86737C17.0383 8.74365 17.6082 7.36871 17.6082 5.78027C17.6082 4.19238 17.0385 2.81726 15.9146 1.69318C14.7907 0.569641 13.4156 0 11.8275 0C10.2391 0 8.86414 0.569641 7.74042 1.69336C6.6167 2.81708 6.04688 4.1922 6.04688 5.78027C6.04688 7.36871 6.6167 8.74384 7.74042 9.86755C8.8645 10.9911 10.2396 11.5609 11.8275 11.5609ZM8.73505 2.68781C9.59729 1.82556 10.6088 1.40643 11.8275 1.40643C13.0461 1.40643 14.0577 1.82556 14.9202 2.68781C15.7824 3.55023 16.2017 4.56189 16.2017 5.78027C16.2017 6.99902 15.7824 8.0105 14.9202 8.87292C14.0577 9.73535 13.0461 10.1545 11.8275 10.1545C10.6091 10.1545 9.59766 9.73517 8.73505 8.87292C7.87262 8.01068 7.45331 6.99902 7.45331 5.78027C7.45331 4.56189 7.87262 3.55023 8.73505 2.68781Z"
+                fill="#9b2b23" />
+              <path
+                d="M21.9435 18.4548C21.9111 17.9872 21.8456 17.4771 21.7491 16.9384C21.6517 16.3956 21.5262 15.8826 21.3761 15.4136C21.2208 14.929 21.0101 14.4503 20.7491 13.9916C20.4787 13.5156 20.1608 13.101 19.8041 12.7599C19.4312 12.403 18.9745 12.1161 18.4464 11.9068C17.9202 11.6986 17.337 11.5931 16.7131 11.5931C16.4681 11.5931 16.2312 11.6937 15.7736 11.9916C15.492 12.1752 15.1626 12.3876 14.7949 12.6226C14.4805 12.8229 14.0546 13.0106 13.5286 13.1805C13.0153 13.3466 12.4942 13.4308 11.9797 13.4308C11.4655 13.4308 10.9444 13.3466 10.4308 13.1805C9.90527 13.0107 9.47919 12.8231 9.16534 12.6227C8.80115 12.39 8.47156 12.1776 8.18573 11.9914C7.72852 11.6935 7.49158 11.593 7.24658 11.593C6.62256 11.593 6.03955 11.6986 5.51349 11.907C4.98578 12.1159 4.52893 12.4028 4.15558 12.7601C3.79889 13.1014 3.48102 13.5157 3.21075 13.9916C2.9502 14.4503 2.73926 14.9288 2.58398 15.4138C2.43402 15.8828 2.30859 16.3956 2.21118 16.9384C2.1145 17.4763 2.04913 17.9866 2.01672 18.4554C1.98486 18.9137 1.96875 19.3907 1.96875 19.8726C1.96875 21.1254 2.367 22.1396 3.15234 22.8876C3.92798 23.6257 4.9541 24 6.20233 24H17.7585C19.0063 24 20.0325 23.6257 20.8083 22.8876C21.5938 22.1402 21.9921 21.1256 21.9921 19.8724C21.9919 19.3889 21.9756 18.9119 21.9435 18.4548ZM19.8386 21.8687C19.326 22.3564 18.6456 22.5936 17.7583 22.5936H6.20233C5.31482 22.5936 4.6344 22.3564 4.12207 21.8688C3.61945 21.3904 3.37518 20.7372 3.37518 19.8726C3.37518 19.4229 3.39001 18.9789 3.41968 18.5526C3.44861 18.1344 3.50775 17.675 3.59546 17.1868C3.68207 16.7047 3.7923 16.2523 3.9234 15.8427C4.04919 15.4499 4.22076 15.061 4.43353 14.6863C4.6366 14.3293 4.87024 14.0229 5.12805 13.7761C5.3692 13.5452 5.67316 13.3563 6.03131 13.2145C6.36255 13.0834 6.7348 13.0117 7.13892 13.0009C7.18817 13.027 7.27588 13.077 7.41797 13.1697C7.70709 13.3581 8.04034 13.5731 8.40875 13.8083C8.82404 14.0731 9.35907 14.3123 9.99829 14.5186C10.6518 14.7299 11.3183 14.8372 11.9799 14.8372C12.6414 14.8372 13.3081 14.7299 13.9612 14.5188C14.601 14.3121 15.1359 14.0731 15.5517 13.808C15.9287 13.567 16.2526 13.3583 16.5417 13.1697C16.6838 13.0772 16.7715 13.027 16.8208 13.0009C17.2251 13.0117 17.5974 13.0834 17.9288 13.2145C18.2867 13.3563 18.5907 13.5454 18.8318 13.7761C19.0897 14.0228 19.3233 14.3291 19.5264 14.6865C19.7393 15.061 19.9111 15.4501 20.0367 15.8425C20.168 16.2526 20.2784 16.7049 20.3648 17.1866C20.4523 17.6757 20.5117 18.1353 20.5406 18.5528V18.5532C20.5704 18.9778 20.5854 19.4216 20.5856 19.8726C20.5854 20.7374 20.3412 21.3904 19.8386 21.8687Z"
+                fill="#9b2b23" />
+            </svg>
+          </button>
+
+          <!-- cart -->
+          <button class="button-icon-only-res" id="cart" onclick="showPopup()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.75 3C3.55109 3 3.36032 3.07902 3.21967 3.21967C3.07902 3.36032 3 3.55109 3 3.75C3 3.94891 3.07902 4.13968 3.21967 4.28033C3.36032 4.42098 3.55109 4.5 3.75 4.5H4.119C4.28186 4.50028 4.4402 4.55357 4.57009 4.6518C4.69999 4.75003 4.79438 4.88788 4.839 5.0445L7.218 13.3695C7.35255 13.8393 7.63641 14.2525 8.02665 14.5467C8.41689 14.8409 8.8923 15 9.381 15H16.2345C16.6843 15.0001 17.1237 14.8654 17.4962 14.6132C17.8686 14.3611 18.157 14.0031 18.324 13.5855L20.535 8.0565C20.6259 7.82899 20.6597 7.58268 20.6334 7.3391C20.6071 7.09551 20.5216 6.86208 20.3842 6.65919C20.2469 6.4563 20.062 6.29014 19.8456 6.17523C19.6292 6.06032 19.388 6.00015 19.143 6H6.672L6.2805 4.632C6.14629 4.16216 5.86277 3.74878 5.47281 3.45434C5.08285 3.15991 4.60763 3.00043 4.119 3H3.75ZM8.661 12.9555L7.101 7.5H19.143L16.9305 13.029C16.8748 13.168 16.7787 13.2872 16.6547 13.3711C16.5306 13.4551 16.3843 13.5 16.2345 13.5H9.381C9.21814 13.4997 9.0598 13.4464 8.92991 13.3482C8.80001 13.25 8.70562 13.1121 8.661 12.9555ZM9.75 21C10.0455 21 10.3381 20.9418 10.611 20.8287C10.884 20.7157 11.1321 20.5499 11.341 20.341C11.5499 20.1321 11.7157 19.884 11.8287 19.611C11.9418 19.3381 12 19.0455 12 18.75C12 18.4545 11.9418 18.1619 11.8287 17.889C11.7157 17.616 11.5499 17.3679 11.341 17.159C11.1321 16.9501 10.884 16.7843 10.611 16.6713C10.3381 16.5582 10.0455 16.5 9.75 16.5C9.15326 16.5 8.58097 16.7371 8.15901 17.159C7.73705 17.581 7.5 18.1533 7.5 18.75C7.5 19.3467 7.73705 19.919 8.15901 20.341C8.58097 20.7629 9.15326 21 9.75 21ZM9.75 19.5C9.55109 19.5 9.36032 19.421 9.21967 19.2803C9.07902 19.1397 9 18.9489 9 18.75C9 18.5511 9.07902 18.3603 9.21967 18.2197C9.36032 18.079 9.55109 18 9.75 18C9.94891 18 10.1397 18.079 10.2803 18.2197C10.421 18.3603 10.5 18.5511 10.5 18.75C10.5 18.9489 10.421 19.1397 10.2803 19.2803C10.1397 19.421 9.94891 19.5 9.75 19.5ZM15.75 21C16.0455 21 16.3381 20.9418 16.611 20.8287C16.884 20.7157 17.1321 20.5499 17.341 20.341C17.5499 20.1321 17.7157 19.884 17.8287 19.611C17.9418 19.3381 18 19.0455 18 18.75C18 18.4545 17.9418 18.1619 17.8287 17.889C17.7157 17.616 17.5499 17.3679 17.341 17.159C17.1321 16.9501 16.884 16.7843 16.611 16.6713C16.3381 16.5582 16.0455 16.5 15.75 16.5C15.1533 16.5 14.581 16.7371 14.159 17.159C13.7371 17.581 13.5 18.1533 13.5 18.75C13.5 19.3467 13.7371 19.919 14.159 20.341C14.581 20.7629 15.1533 21 15.75 21ZM15.75 19.5C15.5511 19.5 15.3603 19.421 15.2197 19.2803C15.079 19.1397 15 18.9489 15 18.75C15 18.5511 15.079 18.3603 15.2197 18.2197C15.3603 18.079 15.5511 18 15.75 18C15.9489 18 16.1397 18.079 16.2803 18.2197C16.421 18.3603 16.5 18.5511 16.5 18.75C16.5 18.9489 16.421 19.1397 16.2803 19.2803C16.1397 19.421 15.9489 19.5 15.75 19.5Z"
+                fill="#9b2b23" />
+            </svg>
+
+          </button>
+        </div>
+        <!-- ################# -->
+        <!-- Header tablet start Here -->
+        <!-- ################# -->
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+
+          <ul class="menu__box">
+            <li><a class="menu__item" href="#">Home</a></li>
+            <li><a class="menu__item" href="#">CARBON BRUSH</a></li>
+            <li><a class="menu__item" href="#">CARBON VANE</a></li>
+            <li><a class="menu__item" href="#">CARBON VANE</a></li>
+            <li><a class="menu__item" href="#">CONTACT US</a></li>
+            <li><a class="menu__item" href="#">SIGN UP</a></li>
+          </ul>
+        </div>
+        <!-- ################# -->
+        <!-- Header tablet end Here -->
+        <!-- ################# -->
+      </div>
+    </div>
+  </section>
+  <!-- ################# -->
+  <!-- Top End Here -->
+  <!-- ################# -->
+
+  <!-- ################# -->
+  <!-- Header start Here -->
+  <!-- ################# -->
+  <section class="header-main">
+    <div class="container">
+      <header class="header-container">
+        <!-- nevbar menu -->
+        <nav class="navbar-main">
+          <ul>
+            <li>Home</li>
+            <li style="padding: 25px 39px;">
+              <img src="assets/images/carbon-brush.svg" alt="carbon brush">
+              CARBON BRUSH
+            </li>
+            <li style="padding: 25px 40px;">
+              <img src="assets/images/CARBON VANE.svg" alt="CARBON VANE" style="width: 28px;">
+              CARBON VANE
+            </li>
+            <li>DOWNLOAD</li>
+            <li style="border-right: none;">CONTACT US</li>
+            <div class="icons">
+              <button class="button-icon-only">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.8275 11.5609C13.4158 11.5609 14.7909 10.9913 15.9148 9.86737C17.0383 8.74365 17.6082 7.36871 17.6082 5.78027C17.6082 4.19238 17.0385 2.81726 15.9146 1.69318C14.7907 0.569641 13.4156 0 11.8275 0C10.2391 0 8.86414 0.569641 7.74042 1.69336C6.6167 2.81708 6.04688 4.1922 6.04688 5.78027C6.04688 7.36871 6.6167 8.74384 7.74042 9.86755C8.8645 10.9911 10.2396 11.5609 11.8275 11.5609ZM8.73505 2.68781C9.59729 1.82556 10.6088 1.40643 11.8275 1.40643C13.0461 1.40643 14.0577 1.82556 14.9202 2.68781C15.7824 3.55023 16.2017 4.56189 16.2017 5.78027C16.2017 6.99902 15.7824 8.0105 14.9202 8.87292C14.0577 9.73535 13.0461 10.1545 11.8275 10.1545C10.6091 10.1545 9.59766 9.73517 8.73505 8.87292C7.87262 8.01068 7.45331 6.99902 7.45331 5.78027C7.45331 4.56189 7.87262 3.55023 8.73505 2.68781Z"
+                    fill="white" />
+                  <path
+                    d="M21.9435 18.4548C21.9111 17.9872 21.8456 17.4771 21.7491 16.9384C21.6517 16.3956 21.5262 15.8826 21.3761 15.4136C21.2208 14.929 21.0101 14.4503 20.7491 13.9916C20.4787 13.5156 20.1608 13.101 19.8041 12.7599C19.4312 12.403 18.9745 12.1161 18.4464 11.9068C17.9202 11.6986 17.337 11.5931 16.7131 11.5931C16.4681 11.5931 16.2312 11.6937 15.7736 11.9916C15.492 12.1752 15.1626 12.3876 14.7949 12.6226C14.4805 12.8229 14.0546 13.0106 13.5286 13.1805C13.0153 13.3466 12.4942 13.4308 11.9797 13.4308C11.4655 13.4308 10.9444 13.3466 10.4308 13.1805C9.90527 13.0107 9.47919 12.8231 9.16534 12.6227C8.80115 12.39 8.47156 12.1776 8.18573 11.9914C7.72852 11.6935 7.49158 11.593 7.24658 11.593C6.62256 11.593 6.03955 11.6986 5.51349 11.907C4.98578 12.1159 4.52893 12.4028 4.15558 12.7601C3.79889 13.1014 3.48102 13.5157 3.21075 13.9916C2.9502 14.4503 2.73926 14.9288 2.58398 15.4138C2.43402 15.8828 2.30859 16.3956 2.21118 16.9384C2.1145 17.4763 2.04913 17.9866 2.01672 18.4554C1.98486 18.9137 1.96875 19.3907 1.96875 19.8726C1.96875 21.1254 2.367 22.1396 3.15234 22.8876C3.92798 23.6257 4.9541 24 6.20233 24H17.7585C19.0063 24 20.0325 23.6257 20.8083 22.8876C21.5938 22.1402 21.9921 21.1256 21.9921 19.8724C21.9919 19.3889 21.9756 18.9119 21.9435 18.4548ZM19.8386 21.8687C19.326 22.3564 18.6456 22.5936 17.7583 22.5936H6.20233C5.31482 22.5936 4.6344 22.3564 4.12207 21.8688C3.61945 21.3904 3.37518 20.7372 3.37518 19.8726C3.37518 19.4229 3.39001 18.9789 3.41968 18.5526C3.44861 18.1344 3.50775 17.675 3.59546 17.1868C3.68207 16.7047 3.7923 16.2523 3.9234 15.8427C4.04919 15.4499 4.22076 15.061 4.43353 14.6863C4.6366 14.3293 4.87024 14.0229 5.12805 13.7761C5.3692 13.5452 5.67316 13.3563 6.03131 13.2145C6.36255 13.0834 6.7348 13.0117 7.13892 13.0009C7.18817 13.027 7.27588 13.077 7.41797 13.1697C7.70709 13.3581 8.04034 13.5731 8.40875 13.8083C8.82404 14.0731 9.35907 14.3123 9.99829 14.5186C10.6518 14.7299 11.3183 14.8372 11.9799 14.8372C12.6414 14.8372 13.3081 14.7299 13.9612 14.5188C14.601 14.3121 15.1359 14.0731 15.5517 13.808C15.9287 13.567 16.2526 13.3583 16.5417 13.1697C16.6838 13.0772 16.7715 13.027 16.8208 13.0009C17.2251 13.0117 17.5974 13.0834 17.9288 13.2145C18.2867 13.3563 18.5907 13.5454 18.8318 13.7761C19.0897 14.0228 19.3233 14.3291 19.5264 14.6865C19.7393 15.061 19.9111 15.4501 20.0367 15.8425C20.168 16.2526 20.2784 16.7049 20.3648 17.1866C20.4523 17.6757 20.5117 18.1353 20.5406 18.5528V18.5532C20.5704 18.9778 20.5854 19.4216 20.5856 19.8726C20.5854 20.7374 20.3412 21.3904 19.8386 21.8687Z"
+                    fill="white" />
+                </svg>
+              </button>
+              <button class="button-icon-only" id="cart" onclick="showPopup()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.75 3C3.55109 3 3.36032 3.07902 3.21967 3.21967C3.07902 3.36032 3 3.55109 3 3.75C3 3.94891 3.07902 4.13968 3.21967 4.28033C3.36032 4.42098 3.55109 4.5 3.75 4.5H4.119C4.28186 4.50028 4.4402 4.55357 4.57009 4.6518C4.69999 4.75003 4.79438 4.88788 4.839 5.0445L7.218 13.3695C7.35255 13.8393 7.63641 14.2525 8.02665 14.5467C8.41689 14.8409 8.8923 15 9.381 15H16.2345C16.6843 15.0001 17.1237 14.8654 17.4962 14.6132C17.8686 14.3611 18.157 14.0031 18.324 13.5855L20.535 8.0565C20.6259 7.82899 20.6597 7.58268 20.6334 7.3391C20.6071 7.09551 20.5216 6.86208 20.3842 6.65919C20.2469 6.4563 20.062 6.29014 19.8456 6.17523C19.6292 6.06032 19.388 6.00015 19.143 6H6.672L6.2805 4.632C6.14629 4.16216 5.86277 3.74878 5.47281 3.45434C5.08285 3.15991 4.60763 3.00043 4.119 3H3.75ZM8.661 12.9555L7.101 7.5H19.143L16.9305 13.029C16.8748 13.168 16.7787 13.2872 16.6547 13.3711C16.5306 13.4551 16.3843 13.5 16.2345 13.5H9.381C9.21814 13.4997 9.0598 13.4464 8.92991 13.3482C8.80001 13.25 8.70562 13.1121 8.661 12.9555ZM9.75 21C10.0455 21 10.3381 20.9418 10.611 20.8287C10.884 20.7157 11.1321 20.5499 11.341 20.341C11.5499 20.1321 11.7157 19.884 11.8287 19.611C11.9418 19.3381 12 19.0455 12 18.75C12 18.4545 11.9418 18.1619 11.8287 17.889C11.7157 17.616 11.5499 17.3679 11.341 17.159C11.1321 16.9501 10.884 16.7843 10.611 16.6713C10.3381 16.5582 10.0455 16.5 9.75 16.5C9.15326 16.5 8.58097 16.7371 8.15901 17.159C7.73705 17.581 7.5 18.1533 7.5 18.75C7.5 19.3467 7.73705 19.919 8.15901 20.341C8.58097 20.7629 9.15326 21 9.75 21ZM9.75 19.5C9.55109 19.5 9.36032 19.421 9.21967 19.2803C9.07902 19.1397 9 18.9489 9 18.75C9 18.5511 9.07902 18.3603 9.21967 18.2197C9.36032 18.079 9.55109 18 9.75 18C9.94891 18 10.1397 18.079 10.2803 18.2197C10.421 18.3603 10.5 18.5511 10.5 18.75C10.5 18.9489 10.421 19.1397 10.2803 19.2803C10.1397 19.421 9.94891 19.5 9.75 19.5ZM15.75 21C16.0455 21 16.3381 20.9418 16.611 20.8287C16.884 20.7157 17.1321 20.5499 17.341 20.341C17.5499 20.1321 17.7157 19.884 17.8287 19.611C17.9418 19.3381 18 19.0455 18 18.75C18 18.4545 17.9418 18.1619 17.8287 17.889C17.7157 17.616 17.5499 17.3679 17.341 17.159C17.1321 16.9501 16.884 16.7843 16.611 16.6713C16.3381 16.5582 16.0455 16.5 15.75 16.5C15.1533 16.5 14.581 16.7371 14.159 17.159C13.7371 17.581 13.5 18.1533 13.5 18.75C13.5 19.3467 13.7371 19.919 14.159 20.341C14.581 20.7629 15.1533 21 15.75 21ZM15.75 19.5C15.5511 19.5 15.3603 19.421 15.2197 19.2803C15.079 19.1397 15 18.9489 15 18.75C15 18.5511 15.079 18.3603 15.2197 18.2197C15.3603 18.079 15.5511 18 15.75 18C15.9489 18 16.1397 18.079 16.2803 18.2197C16.421 18.3603 16.5 18.5511 16.5 18.75C16.5 18.9489 16.421 19.1397 16.2803 19.2803C16.1397 19.421 15.9489 19.5 15.75 19.5Z"
+                    fill="white" />
+                </svg>
+              </button>
+            </div>
+          </ul>
+      </header>
+    </div>
+  </section>
+  <!-- ################# -->
+  <!-- Header end Here -->
+  <!-- ################# -->
+
+
+
+
+  <!------------------------------------------product detail -->
+  <section class="product-detail-main">
+    <div class="container">
+      <div class="product-detail-top">
+        <div class="left-side">
+          <ul>
+            <li>HOME</li>
+            <li><i class="fa-solid fa-greater-than"></i></li>
+            <li>BRUSH</li>
+            <li><i class="fa-solid fa-greater-than"></i></li>
+            <li>POWER TOOL CARBON BRSUH</li>
+            <li><i class="fa-solid fa-greater-than"></i></li>
+            <li>BOSCH</li>
+            <li><i class="fa-solid fa-greater-than"></i></li>
+            <li>1617000425</li>
+          </ul>
+          <h2>
+            Carbon Brushes 1617000425 for
+            Bosch GSH 27
+          </h2>
+        </div>
+        <div class="right-side">
+          <div class="box">
+            <div class="label-box">
+              <h6>OEM No</h6>
+            </div>
+            <div class="label-info-box">
+              <h6>1617000425</h6>
+            </div>
+          </div>
+          <div class="box">
+            <div class="label-box">
+              <h6>Dimensions</h6>
+            </div>
+            <div class="label-info-box">
+              <h6>6.3 * 16 * 22 mm</h6>
+            </div>
+          </div>
+          <div class="box">
+            <div class="label-box">
+              <h6 class="p-4">CARBONKIN Reference</h6>
+            </div>
+            <div class="label-info-box">
+              <h6>TS0001</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-detail">
+        <div class="left-side-img">
+          <div class="ab_pt_imgL-container">
+            <span class="ab_pt_imgs_slider">
+              <div tabindex="0">
+                <img src="assets/images/product img.png" alt=""
+                  onclick="changeImage('assets/images/product img.png')" />
+              </div>
+              <div tabindex="0">
+                <img src="assets/images/product img.png" alt=""
+                  onclick="changeImage('assets/images/product img.png')" />
+              </div>
+              <div tabindex="0">
+                <img src="assets/images/product img.png" alt=""
+                  onclick="changeImage('assets/images/product img.png')" />
+              </div>
+              <div tabindex="0">
+                <img src="assets/images/product img.png" alt=""
+                  onclick="changeImage('assets/images/product img.png')" />
+              </div>
+
+              <div tabindex="0">
+                <img src="assets/images/product img.png" alt=""
+                  onclick="changeImage('assets/images/product img.png')" />
+              </div>
+            </span>
+            <div class="ab_pt_imgd">
+              <img src="assets/images/product img.png" alt="" id="ap_img" />
+            </div>
+
+          </div>
+          <!--    <div class="img-slider">
+                        <img src="assets/images/product img.png" alt="product img">
+                        <img src="assets/images/product img.png" alt="product img">
+                        <img src="assets/images/product img.png" alt="product img">
+                        <img src="assets/images/product img.png" alt="product img">
+                    </div>
+                    <div class="main-img">
+                        <img src="assets/images/product img.png" alt="Product img main">
+                    </div> -->
+        </div>
+        <div class="right-side-info">
+          <div class="table">
+            <div class="table-header">
+              <div class="table-row">
+                <div class="table-cell">Quantity</div>
+                <div class="table-cell">Volume Pricing (Price is for each pair)</div>
+              </div>
+            </div>
+            <div class="table-body">
+              <div class="table-row active">
+                <div class="table-cell">10 - 50</div>
+                <div class="table-cell">$6.36</div>
+              </div>
+              <div class="table-row">
+                <div class="table-cell">51 - 99</div>
+                <div class="table-cell">$5.09 (20% off each)</div>
+              </div>
+              <div class="table-row active" style="border-bottom: none;">
+                <div class="table-cell">100+</div>
+                <div class="table-cell">$4.45 (30% off each)</div>
+              </div>
+            </div>
+          </div>
+          <div class="multi-btn">
+            <button>PRICE: $567</button>
+            <div class="quantity-container" id="productDetailsCounter">
+              <button class="decrease-btn" aria-label="Decrease">&minus;</button>
+              <input type="number" disabled class="quantity-input" value="1" min="1" max="10">
+              <button class="increase-btn" aria-label="Increase">&plus;</button>
+            </div>
+            <div class="tow-button">
+              <button>Buy Now</button>
+              <button>ADD TO CART</button>
+            </div>
+          </div>
+          <button class="btn-danger-light">Note: Quantity discounts available.</button>
+
+        </div>
+      </div>
+      <div class="application-info">
+        <h5>Application</h5>
+        <p>Fit Model: BOSCH GSH 27, GSH 27 VC, USH 27 (Yellow Old Model), PWS1800, GOF1600ACE, GOF1700AC, PG26,
+          PG32,
+          Brute 11304, BH2770VCD, BH2760VCB, BH2760VCK</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!------------------------------------------Img ----------------------------->
+  <section class="img-main" style="margin: 20px 0px;">
+    <div class="container">
+      <img src="assets/images/6513de721abb3ba44c0bbdc0a6ae606 12.webp" alt="product detail" style="width: 100%;">
+    </div>
+  </section>
+
+
+
+  <!------------------------------------------contact -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Feeling stuck? We’ll get
+          you the right carbon
+          brush!</h2>
+        <button class="btn-contact">CONTACT US</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+
+  <!------------------------------------------footer  -->
+  <section class="footer-main">
+    <div class="container">
+      <div class="footer-box">
+        <!-- footer logo -->
+        <div class="logo-footer">
+          <a href="index.html">
+            <img src="assets/images/footer-logo.svg" alt="Logo" />
+          </a>
+        </div>
+        <!-- footer menu -->
+
+        <div class="footer-menu">
+          <div class="menu">
+            <label>Our Categories</label>
+            <h4>Carbon Brush By Device</h4>
+            <h4>Carbon Brush By Image</h4>
+            <h4>Carbon Brush By Image</h4>
+            <h4>Carbon Vane By Brand</h4>
+          </div>
+          <div class="menu">
+            <label>Other Places</label>
+            <h4>Amazon.com</h4>
+            <h4>Amazon.co.uk</h4>
+            <h4>Amazon.nl</h4>
+            <h4>Bol.com</h4>
+            <h4>Caronbrushes.be</h4>
+            <h4>Carbonbrushed.fr</h4>
+            <h4>Ebay.nl</h4>
+          </div>
+          <div class="menu">
+            <label>Shortcuts</label>
+            <h4>All Carbon Brushed</h4>
+            <h4>Carbon Brushes By Brand</h4>
+            <h4>Carbon Brushes By Image</h4>
+            <h4>Carbon Brush Selection Tool</h4>
+            <h4>My Account</h4>
+            <h4>Contact Us</h4>
+          </div>
+          <div class="menu">
+            <label>Quick Links</label>
+            <h4>Home</h4>
+            <h4>Carbon Brush</h4>
+            <h4>Carbon Vane</h4>
+            <h4>Download</h4>
+            <h4>Terms & Conditions</h4>
+            <h4>Privacy Policy</h4>
+          </div>
+          <div class="menu">
+            <label>Contact Us</label>
+            <h4>
+              <img src="assets/images/octicon_location-24.png" alt="">
+              13401 W 43rd Dr, Golden, Co 80403, US
+            </h4>
+            <h4>
+              <img src="assets/images/carbon_email.png" alt="">
+              support@carbonprostore.com
+            </h4>
+            <h4>
+              <img src="assets/images/octicon_home-24.png" alt="">
+              3333 LBJ FWY, Dallas, TX, 75241,US
+            </h4>
+          </div>
+        </div>
+        <hr>
+        <div class="copyright">
+          <h4>copyright all right reserved</h4>
+          <img src="assets/images/payment.png" alt="payment">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-------------------------------------------- Popup Modal for Cart -------------------------------------------->
+  <div id="popup" class="popup hidden" onclick="closePopupOutside(event)">
+    <div class="popup-content">
+      <div class="btn-popup">
+        <span class="popup-message">Shopping Cart</span>
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+      </div>
+
+      <div class="data-table">
+        <div class="data-table-header">
+          <div class="data-table-row">
+            <div class="data-table-cell p-120">PN</div>
+            <div class="data-table-cell">Unit Price</div>
+            <div class="data-table-cell">Quantity</div>
+            <div class="data-table-cell">Total Price</div>
+          </div>
+        </div>
+        <div class="data-table-body">
+          <div class="data-table-row">
+            <div class="data-table-cell">1617000425</div>
+            <div class="data-table-cell">6.36</div>
+            <div class="data-table-cell">01</div>
+            <div class="data-table-cell">6.36</div>
+          </div>
+          <div class="data-table-row">
+            <div class="data-table-cell">1617000425</div>
+            <div class="data-table-cell">6.36</div>
+            <div class="data-table-cell">01</div>
+            <div class="data-table-cell">6.36</div>
+          </div>
+          <div class="data-table-row">
+            <div class="data-table-cell">1617000425</div>
+            <div class="data-table-cell">6.36</div>
+            <div class="data-table-cell">01</div>
+            <div class="data-table-cell">6.36</div>
+          </div>
+          <div class="data-table-row">
+            <div class="data-table-cell">1617000425</div>
+            <div class="data-table-cell">6.36</div>
+            <div class="data-table-cell">01</div>
+            <div class="data-table-cell">6.36</div>
+          </div>
+          <div class="data-table-row">
+            <div class="data-table-cell">1617000425</div>
+            <div class="data-table-cell">6.36</div>
+            <div class="data-table-cell">01</div>
+            <div class="data-table-cell">6.36</div>
+          </div>
+          <div class="data-table-row">
+            <div class="data-table-cell">1617000425</div>
+            <div class="data-table-cell">6.36</div>
+            <div class="data-table-cell">01</div>
+            <div class="data-table-cell">6.36</div>
+          </div>
+          <div class="data-table-row">
+            <div class="data-table-cell">1617000425</div>
+            <div class="data-table-cell">6.36</div>
+            <div class="data-table-cell">01</div>
+            <div class="data-table-cell">6.36</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-popup">
+        <span class="popup-message-total">Subtotal</span>
+        <span class="popup-message-total">$200.00</span>
+      </div>
+      <button class="button-without-icon btn">CHECK OUT</button>
+    </div>
+  </div>
+
+
+
+
+  <!-- Popup for search bar -->
+  <div class="modal-popup" id="searchModal">
+    <div class="modal-content" id="modalContent">
+      <div class="search-bar-container">
+        <span class="fa fa-search search-bar-icon"></span>
+        <input placeholder="Search Here" />
+      </div>
+      <button class="modal-close-btn" onclick="closeSearchModal()"> <span class="popup-close-1">&times;</span>
+      </button>
+    </div>
+  </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  // Function to initialize custom dropdown functionality
+  function initCustomSelect(customSelectId) {
+    const customSelect = document.getElementById(customSelectId);
+    const selected = customSelect.querySelector(".selected");
+    const options = customSelect.querySelector(".options");
+    const selectedText = customSelect.querySelector("#selected-text");
+    const flagImg = customSelect.querySelector("#flag-img");
+
+    // Toggle options on selected click
+    selected.addEventListener("click", () => {
+      options.style.display =
+        options.style.display === "block" ? "none" : "block";
+    });
+
+    // Add click event listeners for each option
+    customSelect.querySelectorAll(".option").forEach((option) => {
+      option.addEventListener("click", () => {
+        const value = option.getAttribute("data-value");
+        const flag = option.getAttribute("data-flag");
+
+        selectedText.textContent = value;
+        flagImg.src = flag;
+
+        options.style.display = "none"; // Close the dropdown
+      });
+    });
+
+    // Close the dropdown if clicked outside of the custom select
+    document.addEventListener("click", (e) => {
+      if (!customSelect.contains(e.target)) {
+        options.style.display = "none";
+      }
+    });
+  }
+
+  // Initialize custom dropdown for all four sections
+  initCustomSelect("custom-select");
+  initCustomSelect("custom-select-1");
+  initCustomSelect("custom-select-res");
+  initCustomSelect("custom-select-res-1");
+
+
+
+  // Function to show the popup
+  function showPopup() {
+    document.getElementById("popup").classList.remove("hidden");
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById("popup").classList.add("hidden");
+  }
+
+  // Function to close the popup if clicked outside of the popup content
+  function closePopupOutside(event) {
+    const popupContent = document.querySelector('.popup-content');
+    if (!popupContent.contains(event.target)) {
+      closePopup();
+    }
+  }
+  const quantityContainer = document.getElementById("productDetailsCounter");
+  const minusBtn = quantityContainer.querySelector(".decrease-btn");
+  const plusBtn = quantityContainer.querySelector(".increase-btn");
+  const inputBox = quantityContainer.querySelector(".quantity-input");
+
+  // Set initial value if needed
+  inputBox.value = 0; // Starting from 0
+
+  // Add event listeners
+  minusBtn.addEventListener("click", () => {
+    let currentValue = parseInt(inputBox.value);
+
+    if (currentValue > 1) {
+      inputBox.value = currentValue - 1;
+    }
+  });
+
+  plusBtn.addEventListener("click", () => {
+    let currentValue = parseInt(inputBox.value);
+
+    if (currentValue < 10) {
+      inputBox.value = currentValue + 1;
+    }
+  });
+
+
+  // transform 0.2s cubic-bezier(0, 1.91, 0.92, -0.92)
+
+
+  function showSearchModal() {
+    document.getElementById("searchModal").style.display = "flex";
+  }
+
+  function closeSearchModal() {
+    document.getElementById("searchModal").style.display = "none";
+  }
+
+  // Close the modal if clicked outside of modal-content
+  window.onclick = function (event) {
+    let modal = document.getElementById("searchModal");
+    let modalContent = document.getElementById("modalContent");
+
+    if (event.target == modal) {
+      closeSearchModal();
+    }
+  }
+
+</script>
+
+<script src="min.js"></script>
+<script src="min2.js"></script>
+
+<script>
+  var changing_img = document.getElementById("ap_img");
+  function changeImage(url) {
+    console.log(url);
+    changing_img.src = url;
+    $("#ap_img").elevateZoom();
+  }
+  $("#ap_img").elevateZoom();
+</script>
+
+
+</html>
