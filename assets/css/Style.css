@@ -8,9 +8,14 @@
   margin: 0;
 }
 
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-  display: none;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 /* <!-- ################# -->
@@ -278,21 +283,21 @@ svg {
   opacity: 0;
 }
 
-#menu__toggle:checked~.menu__btn>span {
+#menu__toggle:checked ~ .menu__btn > span {
   transform: rotate(45deg);
 }
 
-#menu__toggle:checked~.menu__btn>span::before {
+#menu__toggle:checked ~ .menu__btn > span::before {
   top: 0;
   transform: rotate(0);
 }
 
-#menu__toggle:checked~.menu__btn>span::after {
+#menu__toggle:checked ~ .menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
 }
 
-#menu__toggle:checked~.menu__box {
+#menu__toggle:checked ~ .menu__box {
   visibility: visible;
   right: 0;
 }
@@ -309,9 +314,9 @@ svg {
   z-index: 4;
 }
 
-.menu__btn>span,
-.menu__btn>span::before,
-.menu__btn>span::after {
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -320,18 +325,18 @@ svg {
   transition-duration: 0.25s;
 }
 
-.menu__btn:hover>span,
-.menu__btn:hover>span::before,
-.menu__btn:hover>span::after {
+.menu__btn:hover > span,
+.menu__btn:hover > span::before,
+.menu__btn:hover > span::after {
   background-color: #9b2b23;
 }
 
-.menu__btn>span::before {
+.menu__btn > span::before {
   content: "";
   top: -8px;
 }
 
-.menu__btn>span::after {
+.menu__btn > span::after {
   content: "";
   top: 8px;
 }
@@ -389,10 +394,11 @@ svg {
   display: flex;
   align-items: center;
   margin: 0;
+  background-color: #9b2b23;
 }
 
 .navbar-main li {
-  padding: 25px 88px;
+  padding: 25px 84px;
   list-style: none;
   color: #ffffff;
   font-size: 16px;
@@ -417,6 +423,7 @@ svg {
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 0px 10px;
 }
 
 .button-icon-only {
@@ -526,6 +533,10 @@ svg {
   height: auto;
   width: 250px;
   box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.08);
+}
+.single-product-box:hover {
+  border: 1px #9b2b23 solid;
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.2);
 }
 
 .view-all-products {
@@ -661,6 +672,12 @@ svg {
 .Categorie-products {
   margin: 10px;
   width: 205px;
+  border: 1px solid #ffffff00;
+}
+.Categorie-products:hover {
+  border: 1px solid #9c2b23;
+  border-radius: 10px;
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.2);
 }
 
 .img-hold {
@@ -719,6 +736,9 @@ svg {
   border-radius: 20px;
   padding: 30px 62px;
   box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.06);
+}
+.brand:hover {
+  border: 1px solid #9b2b23;
 }
 
 .brand img {
@@ -804,6 +824,10 @@ svg {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
 }
+.footer-menu div h4:hover {
+  color: #9b2b23;
+  cursor: pointer;
+}
 
 .copyright {
   display: flex;
@@ -857,12 +881,23 @@ svg {
   gap: 8px;
 }
 
+.left-side li a {
+  list-style: none;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #9b2b23;
+}
 .left-side li {
   list-style: none;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #9b2b23;
+}
+.left-side li:hover,
+.left-side li a:hover {
+  color: #f22c00;
 }
 
 .right-side {
@@ -1015,7 +1050,7 @@ svg {
   gap: 20px;
 }
 
-.multi-btn>button {
+.multi-btn > button {
   border: 1px solid #111111;
   padding: 14px 20px;
   background: #111111;
@@ -1033,20 +1068,26 @@ svg {
   border: 1px solid #d9d9d9;
   border-radius: 6px;
   overflow: hidden;
-  height: 35px;
+  height: 50px;
+  width: 20%;
 
   input {
     text-align: center;
+    background-color: #f9f9f9;
+    border: none;
+    color: #111111;
+    font-size: 20px;
+    width: 34%;
   }
 }
 
 .quantity-container button {
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   color: #111111;
   border: none;
   cursor: pointer;
   font-size: 20px;
-  width: 30px;
+  width: 33%;
   text-align: center;
   transition: background-color 0.2s;
 }
@@ -1062,7 +1103,7 @@ svg {
 }
 
 .tow-button button {
-  padding: 14px 20px;
+  padding: 18px 58px;
   border: none;
   font-size: 14px;
   cursor: pointer;

@@ -113,6 +113,7 @@
   }
 }
 
+/* media 550px mobile --------------------------------- */
 @media (max-width: 550px) {
   .menu__box {
     top: 19%;
@@ -158,6 +159,13 @@
     padding: 40px 0px;
     justify-content: start;
   }
+  .tow-button button {
+    padding: 18px 52px;
+  }
+  .quantity-container {
+    width: 40%;
+  }
+
   .h2-manage {
     width: 100%;
   }

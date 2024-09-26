@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .marque-main {
+            background-color: #356EFF;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .flex {
+            display: flex;
+            gap: 20px;
+            animation: marquee 15s linear infinite;
+        }
+
+        .flex div {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            gap: 10px;
+        }
+
+        .flex div img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .flex div h5 {
+            font-family: 'Ginka TRIAL', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        /* Media query for screens with a width of 550px or less */
+        @media (max-width: 550px) {
+            .flex div h5 {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="marque-main">
+        <div class="elementor-section">
+            <div class="flex">
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+                <div>
+                    <img src="https://deepflow.life/wp-content/uploads/2024/09/Star-1.png" alt="star">
+                    <h5>WHAT TO EXPECT</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
